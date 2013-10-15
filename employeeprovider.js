@@ -12,7 +12,7 @@ var Db = require('mongodb').Db,
 
 EmployeeProvider = function() {
   var that = this;
-    MongoClient.connect(process.env.MONGOLAB_URI, function(err, db){
+    MongoClient.connect("mongodb://localhost:27017/local", function(err, db){
     if(err) { return console.dir(err); }
     that.db = db;
   })
